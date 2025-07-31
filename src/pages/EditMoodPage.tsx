@@ -30,7 +30,7 @@ const EditMoodPage = () => {
     e.preventDefault();
     try {
       await API.put(`/Mood/${id}`, { emoji, note, date });
-      navigate('/Mood');
+      navigate('/moods');
     } catch (err) {
       console.error('Failed to update mood:', err);
     }
